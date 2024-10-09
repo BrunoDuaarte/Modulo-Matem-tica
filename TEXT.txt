@@ -1,0 +1,95 @@
+ATIVIDADE MODULOS 
+PROF:NAILTON
+ALUNO:BRUNO DUARTE
+
+ATIVIDADE 1
+
+CRIAÇÃO DA PASTA MATEMATICA E AVANCADOS E MODULOS
+
+PASTA AVANCADOS
+--------------------------------------------------------------------
+divisão.py
+
+def divisao(a, b):
+    if b == 0:
+        return "Erro: Divisão por zero!"
+    return a / b
+--------------------------------------------------------------------
+multplicacao.py
+
+def multiplicacao(a, b):
+    return a * b
+--------------------------------------------------------------------
+soma.py
+
+def soma(a, b):
+    return a + b
+--------------------------------------------------------------------
+subtracao.py
+
+def subtracao(a, b):
+    return a - b
+--------------------------------------------------------------------
+criação do __init__.py ajustes:
+
+__init__.py
+
+from .soma import soma
+from .subtracao import subtracao
+from .multiplicacao import multiplicacao
+from .divisao import divisao
+
+--------------------------------------------------------------------
+o main.py vai fora das pasta
+
+main.py
+
+from avancados import divisao, multiplicacao, soma, subtracao
+
+
+print(soma(10, 2))
+print(divisao(10, 2))
+print(subtracao(10, 2))
+print(multiplicacao(10, 2))
+--------------------------------------------------------------------
+ATIVIDADE 2 SUBPACOTE MODULOS QUADRADO E CUBO, E AJUSTE NO __init__.py
+
+CRIAÇÃO DA PASTA SUBPACOTE NA PASTA AVANCADOS
+
+MODULOS:
+
+cubo.py
+
+def calcule_cubo(a, b, c):
+    return a ** 3, b ** 3, c ** 3
+---------------------------------------------------------------------
+quadrado.py
+
+def calcule_quadrado(a, b, c):
+    return a ** 2, b ** 2, c ** 2
+----------------------------------------------------------------------
+__init__.py
+
+from .cubo import calcule_cubo
+from .quadrado import calcule quadrado
+----------------------------------------------------------------------
+ajuste no main.py:
+
+main.py
+
+from avancados import divisao, multiplicacao, soma, subtracao
+
+
+print(soma(10, 2))
+print(divisao(10, 2))
+print(subtracao(10, 2))
+print(multiplicacao(10, 2))
+
+from avancados.sub_pacote import *
+print(calcule_cubo(10, 8, 6))
+print(calcule_quadrado(19, 4, 6))
+------------------------------------------------------------------------
+
+
+
+
